@@ -1,7 +1,7 @@
 package com.example.wasylewskigithubconsumerapi.github.infrastructure.controller;
 
 import com.example.wasylewskigithubconsumerapi.github.infrastructure.controller.dto.response.GetAllUserRepoInfoResponseDto;
-import com.example.wasylewskigithubconsumerapi.github.infrastructure.controller.dto.response.RepositoryInfoDTO;
+import com.example.wasylewskigithubconsumerapi.github.infrastructure.controller.dto.response.RepositoryInfoDto;
 import com.example.wasylewskigithubconsumerapi.github.infrastructure.controller.error.GithubUserNotFoundException;
 import com.example.wasylewskigithubconsumerapi.github.infrastructure.controller.error.InvalidFormatResponseError;
 import com.example.wasylewskigithubconsumerapi.github.infrastructure.service.GithubRepoFetcher;
@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @Log4j2
 @AllArgsConstructor
-@RequestMapping("/github.agent")
+@RequestMapping("/github/agent")
 public class GithubRestController {
     private final GithubRepoFetcher githubRepoFetcher;
     private final GithubUserChecker githubUserChecker;
@@ -32,7 +32,7 @@ public class GithubRestController {
             throw new GithubUserNotFoundException("User with username: " + username + " not found");
         }
 
-        List<RepositoryInfoDTO> repositoryInfoList = githubRepoFetcher.getAllUserRepositories(username, acceptHeader);
+        List<RepositoryInfoDto> repositoryInfoList = githubRepoFetcher.getAllUserRepositories(username, acceptHeader);
         GetAllUserRepoInfoResponseDto responseDto = new GetAllUserRepoInfoResponseDto(repositoryInfoList);
 
         return ResponseEntity.ok(responseDto);

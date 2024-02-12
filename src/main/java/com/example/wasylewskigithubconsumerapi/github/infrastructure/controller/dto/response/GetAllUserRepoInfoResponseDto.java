@@ -3,17 +3,17 @@ package com.example.wasylewskigithubconsumerapi.github.infrastructure.controller
 import java.util.List;
 
 public class GetAllUserRepoInfoResponseDto {
-    private List<RepositoryInfoDTO> repositories;
+    private List<RepositoryInfoDto> repositories;
 
-    public GetAllUserRepoInfoResponseDto(List<RepositoryInfoDTO> repositories) {
+    public GetAllUserRepoInfoResponseDto(List<RepositoryInfoDto> repositories) {
         this.repositories = repositories;
     }
 
-    public List<RepositoryInfoDTO> getRepositories() {
+    public List<RepositoryInfoDto> getRepositories() {
         return repositories;
     }
 
-    public void setRepositories(List<RepositoryInfoDTO> repositories) {
+    public void setRepositories(List<RepositoryInfoDto> repositories) {
         this.repositories = repositories;
     }
 }
