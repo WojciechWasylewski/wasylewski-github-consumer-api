@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          server-github-client:
+            url: https://api.github.com
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 10000
