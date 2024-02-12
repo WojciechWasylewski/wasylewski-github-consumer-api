@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 @Log4j2
 public class GithubErrorHandler {
-
-
     @ExceptionHandler(GithubUserNotFoundException.class)
     @ResponseBody
     public ResponseEntity<ErrorGithubResponseDto> handleException(GithubUserNotFoundException exception) {
@@ -27,5 +25,4 @@ public class GithubErrorHandler {
         return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE)
                 .body(new ErrorGithubResponseDto(HttpStatus.NOT_ACCEPTABLE, exception.getMessage()));
     }
-
 }
