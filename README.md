@@ -18,6 +18,9 @@
   <li>Supports handling exceptions for unsupported media type AcceptHeader: application/xml, returning 406 with message</li>
 </ul>
 
+## Deployment
+The application is deployed on AWS, and you can access the [Swagger UI](http://ec2-3-79-99-187.eu-central-1.compute.amazonaws.com:8000/swagger-ui/index.html#/github-rest-controller/getAllRepositories) to interact with its endpoints.
+
 
 ## Diagram
 <img src="diagram.png">
@@ -35,6 +38,10 @@ Code: <br>
 <br>
 Tests: <br>
 ![image](https://img.shields.io/badge/Junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
+<br>
+Deploy: <br>
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 <br>
 Other: <br>
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
